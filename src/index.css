@@ -1,0 +1,215 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  /* This ensures the font weight is 500 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #555;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/*.nav-btn */
+.nav-btn {
+  --color: #4D2B1E;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color) !important;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.nav-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.nav-btn svg {
+  color: #4D2B1E !important;
+}
+
+.nav-btn:hover {
+  color: white !important;
+}
+
+.nav-btn:hover {
+  background-color: #4D2B1E !important;
+  /* Optional: Change background color on hover */
+}
+
+.nav-btn:hover span,
+.nav-btn:hover svg {
+  color: white !important;
+  /* Change text and icon color to white on hover */
+}
+
+.nav-btn:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.nav-btn:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.nav-btn:active:before {
+  background: white;
+  transition: background 0s;
+}
+
+/* collapse button */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: #4D2B1E;
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: .8s;
+}
+
+#bar1 {
+  width: 50%;
+}
+
+#bar2 {
+  width: 75%;
+}
+
+#checkbox:checked+.toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+
+}
+
+#checkbox:checked+.toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .1s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+
+/* slider responsive */
+.carousel-container {
+  height: 87vh;
+  box-shadow: 0 4px 8px black;
+  /* Bottom shadow */
+}
+
+@media (max-width: 1385px) {
+  .carousel-container {
+    height: auto;
+  }
+}
+
+/* about us */
+.about-us-heading,
+.menu-heading,
+.contact-us-heading {
+  font-family: 'Luckiest Guy', cursive !important;
+  color: #4D2B1E;
+}
+
+/* menu */
+.card-img-top {
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top:hover {
+  opacity: 0.7;
+  /* Fades the image */
+  cursor: pointer;
+  /* Changes the cursor to pointer */
+}
+
+/* .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+} */
