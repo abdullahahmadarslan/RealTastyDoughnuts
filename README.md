@@ -9,7 +9,6 @@ Welcome to the Real Tasty Doughnuts project! This is a startup project developed
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Contributing](#contributing)
   
 ## About
 
