@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer style={{
-            backgroundColor: '#4D2B1E',
+            backgroundColor: '#e90e8b',
             color: 'white',
             padding: '40px 0',
             height: '100px',  /* Adjust height as necessary */
@@ -12,8 +12,8 @@ const Footer = () => {
             justifyContent: 'center'
         }}>
             <div className="container text-center">
-                <p style={{ fontSize: '1.1rem', marginTop: "12px" }}>
-                    &copy; 2024 Pinnochio Cafe. All Rights Reserved.
+                <p style={{ fontSize: '0.9rem', marginTop: "12px" }}>
+                    &copy; 2024 Real Tasty Doughnuts. All Rights Reserved.
                 </p>
             </div>
         </footer>

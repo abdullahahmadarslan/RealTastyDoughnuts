@@ -17,6 +17,10 @@ body {
   margin: 0;
 }
 
+:root {
+  --theme: #e90e8b;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -46,7 +50,6 @@ body {
 
 /*.nav-btn */
 .nav-btn {
-  --color: #4D2B1E;
   font-family: inherit;
   display: inline-block;
   width: 8em;
@@ -56,13 +59,17 @@ body {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border: 2px solid var(--color) !important;
+  border: 2px solid var(--theme) !important;
   transition: color 0.5s;
   z-index: 1;
   font-size: 17px;
   border-radius: 6px;
   font-weight: 500;
   color: var(--color);
+}
+
+.nav-item button {
+  background-color: var(--theme) !important;
 }
 
 .nav-btn:before {
@@ -76,21 +83,21 @@ body {
 }
 
 .nav-btn svg {
-  color: #4D2B1E !important;
+  color: white !important;
 }
 
-.nav-btn:hover {
+.nav-btn span {
   color: white !important;
 }
 
 .nav-btn:hover {
-  background-color: #4D2B1E !important;
+  background-color: white !important;
   /* Optional: Change background color on hover */
 }
 
 .nav-btn:hover span,
 .nav-btn:hover svg {
-  color: white !important;
+  color: var(--theme) !important;
   /* Change text and icon color to white on hover */
 }
 
@@ -131,7 +138,7 @@ body {
 .bars {
   width: 100%;
   height: 4px;
-  background-color: #4D2B1E;
+  background-color: var(--theme);
   border-radius: 4px;
 }
 
@@ -193,7 +200,7 @@ body {
 .menu-heading,
 .contact-us-heading {
   font-family: 'Luckiest Guy', cursive !important;
-  color: #4D2B1E;
+  color: var(--theme);
 }
 
 /* menu */
@@ -209,7 +216,39 @@ body {
   /* Changes the cursor to pointer */
 }
 
+.card-img-top {
+
+  background: rgba(255, 255, 255, 1);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(254, 62, 161, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(254, 62, 161, 1)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(254, 62, 161, 1) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(254, 62, 161, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(254, 62, 161, 1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(254, 62, 161, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fe3ea1', GradientType=0);
+
+
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  /* Optional: To give a bit of slide-up effect */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 } */
+
+/* contact us */
+.send-btn {
+  background-color: var(--theme) !important;
+
+}

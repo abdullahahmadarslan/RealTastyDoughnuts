@@ -104,7 +104,7 @@ const Contact = () => {
                             ></textarea>
                         </div>
                         <button
-                            className="btn btn-link nav-link nav-btn bg-light text-dark d-flex align-items-center justify-content-between"
+                            className="btn btn-link nav-link nav-btn text-dark d-flex align-items-center justify-content-between send-btn"
                             style={{ padding: "5px", zIndex: "1" }}
                             type="submit"
                         >

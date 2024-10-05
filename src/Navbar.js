@@ -1,8 +1,8 @@
 import logo from "./assets/logo.png";
 import { IoMdHome } from "react-icons/io";
 import { IoInformationCircleOutline } from "react-icons/io5";
-import { LuCoffee } from "react-icons/lu";
-import { FaPhoneAlt } from "react-icons/fa";
+import { BiDoughnutChart } from "react-icons/bi";
+import { IoMdCall } from "react-icons/io";
 
 const Navbar = () => {
     const scrollToSection = (id) => {
@@ -15,17 +15,17 @@ const Navbar = () => {
             style={{ mingHeight: "10vh" }}
         >
             <div className="container-fluid">
-                <a className="navbar-brand ms-3" href="carouselExample">
+                <a className="navbar-brand ms-3">
                     <img
                         src={logo}
                         alt="Avatar Logo"
                         style={{
-                            width: "75px",
-                            height: "75px",
-                            borderRadius: "50%",
+                            width: "80px",
+                            height: "80px",
                             transition: "box-shadow 0.3s ease", // smooth transition
+                            cursor: "pointer",
                         }}
-                        className="image-fluid"
+                        className="image-fluid rounded-5"
                         onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0px 4px 15px black")} // Drop shadow on hover
                         onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")} // Remove shadow when hover stops
                     />
@@ -78,7 +78,7 @@ const Navbar = () => {
                                 style={{ padding: "5px" }}
                                 onClick={() => scrollToSection("menu")}
                             >
-                                <LuCoffee style={{ fontSize: "23px", color: "#4D2B1E" }} className="ms-3" />
+                                <BiDoughnutChart style={{ fontSize: "23px", color: "#4D2B1E" }} className="ms-3" />
                                 <span className="me-4" style={{ color: "#4D2B1E" }}>Menu</span>
                             </button>
                         </li>
@@ -88,8 +88,8 @@ const Navbar = () => {
                                 style={{ padding: "5px" }}
                                 onClick={() => scrollToSection("contact")}
                             >
-                                <FaPhoneAlt style={{ fontSize: "20px", color: "#4D2B1E" }} className="ms-1" />
-                                <span className="me-4" style={{ color: "#4D2B1E" }}>Contact</span>
+                                <IoMdCall style={{ fontSize: "20px", color: "#4D2B1E" }} className="ms-3" />
+                                <span className="me-4" style={{ color: "#4D2B1E", fontSize: "15px", marginTop: "3px" }}>Contact</span>
                             </button>
                         </li>
                     </ul>
